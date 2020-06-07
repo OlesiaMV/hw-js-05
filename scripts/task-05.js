@@ -27,6 +27,7 @@ this._isOn = true;
   
     turnOff() {
   this._isOn = false;
+  this._speed = 0;
   }  
   
     accelerate(value) {
@@ -37,7 +38,7 @@ this._isOn = true;
 }
     decelerate(value) {
         let newSpeed = this._speed - value;
-        if (newSpeed > 0) {
+        if (newSpeed >= 0) {
             this._speed = newSpeed;
         }
     }
